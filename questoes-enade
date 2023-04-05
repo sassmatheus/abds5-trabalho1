@@ -1,0 +1,57 @@
+Respostas:
+5) Alternativa D
+6) Alternativa E
+7) Alternativa E
+
+
+Questões:
+
+5)(ENADE) Em um sistema gerenciador de banco de Postgres a coluna SALARIO da tabela COLABORADOR foi definida como NUMERIC(8,2) e a coluna JUROS foi definida como NUMERIC (2,2). Foi criada uma view com a seguinte expressão:
+CREATE VIEW LISTA_VALOR_JUROS
+AS SELECT NOME, SALARIO * JUROS as JUROS_MES
+FROM COLABORADOR
+Assinale a opção que apresenta o tipo de dado que suportará o resultado da coluna JUROS_MES criado na view resultante dessa expressão.
+A) NUMERIC (10,1)
+B) INTEGER
+C) NUMERIC (2,2)
+D) NUMERIC 
+E) LONG INT
+
+6)(ENADE) Views criadas nos bancos podem, de acordo com alguns critérios, ser naturalmente atualizáveis, o que significa, por exemplo, que podem ser objeto de comandos update do SQL sem a necessidade de mecanismos auxiliares ou triggers. Essa característica depende da expressão SQL que define a view e das tabelas/views de origem. Considere alguns tipos de construções SQL que podem ser empregadas na definição de uma coluna de uma view:
+I. funções de agregação, tais como sum, avg
+II. funções escalares, tais como sin, trim
+III.
+expressões aritméticas
+IV. expressões condicionais, tais como case
+V. subconsultas
+Está correto concluir que uma determinada coluna NÃO pode ser objeto de atualização quando resultar de qualquer dos tipos:
+A) apresentados, exceto I, II e III;
+B) apresentados, exceto III e IV;
+C) apresentados, exceto apenas V;
+D) apresentados, exceto V;
+E) apresentados.
+
+7)(ENADE) Considere o seguinte trecho de código PLPGSQL com as linhas numeradas à esquerda.
+1 $$
+2 DECLARE
+3 nome1 VARCHAR (10);
+4 nome2 CHAR(9) ;
+5 BEGIN
+6 nome1 = ’IFSP’;
+7 nome2 = ’IFSP’;
+8 IF (nome1=nome2) THEN
+9 RAISE NOTICE ’% igual a %’, nome1, nome2;
+10 ELSE
+11 RAISE NOTICE ’% diferente a %’, nome2, nome1;
+12 END IF;
+13 END;
+14 $$ 
+Ao executar este código no Postgres, em condições ideais,
+A) será impresso a mensagem da linha 11.
+B) ocorrerá um erro, pois todos os strings
+deveriam estar delimitados por " " e não por ’ ’.
+C) ocorrerá um erro, pois nome1 e nome2
+são de tipos diferentes.
+D) ocorrerá um erro, pois o comando de saída deveria ser RAISE
+EXCEPTION.
+E) será impresso a mensagem da linha 9 .
