@@ -3,7 +3,8 @@
 CREATE USER admin WITH PASSWORD 'admin';
  
 -- B) Criação do banco
---CASO TERMINAL: CREATE DATABASE abds5_trabalho1;
+CREATE DATABASE abds5_trabalho1;
+ALTER DATABASE abds5_trabalho1 SET datestyle TO 'ISO, DMY';
 
 GRANT ALL PRIVILEGES ON DATABASE abds5_trabalho1 TO admin;
 
@@ -70,7 +71,8 @@ INSERT INTO cirurgia (codigo, data, descricao, id_paciente)
 VALUES ('C1', '2023-03-26', 'Cirurgia de cardíaca', 1),
        ('C2', '2023-03-27', 'Cirurgia de plástica', 3),
        ('C3', '2023-03-28', 'Cirurgia de de hérnia', 2);
-
+       
+------------------------------------------------------------
 
 -- 2. *************************************************************
 -- Função para nova cirurgia
